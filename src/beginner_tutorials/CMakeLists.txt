@@ -227,7 +227,12 @@ target_link_libraries(demo_topic_subscriber ${catkin_LIBRARIES})
 # Declare the executable, along whith its source files.
 add_executable(pubvel src/pubvel.cpp)
 add_executable(subpose src/subpose.cpp)
+add_executable(safe_zone_vel_publisher src/safe_zone_vel_publisher.cpp)
+add_executable(smart_turtle src/smart_turtle.cpp)
+
 
 # Specify libreries againts which to link
 target_link_libraries(pubvel ${catkin_LIBRARIES})
 target_link_libraries(subpose ${catkin_LIBRARIES})
+target_link_libraries(safe_zone_vel_publisher ${catkin_LIBRARIES})
+target_link_libraries(smart_turtle ${catkin_LIBRARIES})
