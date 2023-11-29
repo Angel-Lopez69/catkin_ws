@@ -56,40 +56,6 @@ CMAKE_BINARY_DIR = /home/ubunturos/catkin_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -124,6 +90,29 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -134,6 +123,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,64 +168,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-beginner_tutorials/CMakeFiles/smart_turtle.dir/rule:
-	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/smart_turtle.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/smart_turtle.dir/rule
+beginner_tutorials/CMakeFiles/demo_topic_publisher.dir/rule:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/demo_topic_publisher.dir/rule
+.PHONY : beginner_tutorials/CMakeFiles/demo_topic_publisher.dir/rule
 
 # Convenience name for target.
-smart_turtle: beginner_tutorials/CMakeFiles/smart_turtle.dir/rule
+demo_topic_publisher: beginner_tutorials/CMakeFiles/demo_topic_publisher.dir/rule
 
-.PHONY : smart_turtle
+.PHONY : demo_topic_publisher
 
 # fast build rule for target.
-smart_turtle/fast:
-	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/smart_turtle.dir/build.make beginner_tutorials/CMakeFiles/smart_turtle.dir/build
-.PHONY : smart_turtle/fast
-
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/safe_zone_vel_publisher.dir/rule:
-	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/safe_zone_vel_publisher.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/safe_zone_vel_publisher.dir/rule
-
-# Convenience name for target.
-safe_zone_vel_publisher: beginner_tutorials/CMakeFiles/safe_zone_vel_publisher.dir/rule
-
-.PHONY : safe_zone_vel_publisher
-
-# fast build rule for target.
-safe_zone_vel_publisher/fast:
-	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/safe_zone_vel_publisher.dir/build.make beginner_tutorials/CMakeFiles/safe_zone_vel_publisher.dir/build
-.PHONY : safe_zone_vel_publisher/fast
-
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/pubvel.dir/rule:
-	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/pubvel.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/pubvel.dir/rule
-
-# Convenience name for target.
-pubvel: beginner_tutorials/CMakeFiles/pubvel.dir/rule
-
-.PHONY : pubvel
-
-# fast build rule for target.
-pubvel/fast:
-	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/pubvel.dir/build.make beginner_tutorials/CMakeFiles/pubvel.dir/build
-.PHONY : pubvel/fast
-
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/demo_topic_subscriber.dir/rule:
-	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/demo_topic_subscriber.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/demo_topic_subscriber.dir/rule
-
-# Convenience name for target.
-demo_topic_subscriber: beginner_tutorials/CMakeFiles/demo_topic_subscriber.dir/rule
-
-.PHONY : demo_topic_subscriber
-
-# fast build rule for target.
-demo_topic_subscriber/fast:
-	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/demo_topic_subscriber.dir/build.make beginner_tutorials/CMakeFiles/demo_topic_subscriber.dir/build
-.PHONY : demo_topic_subscriber/fast
+demo_topic_publisher/fast:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/demo_topic_publisher.dir/build.make beginner_tutorials/CMakeFiles/demo_topic_publisher.dir/build
+.PHONY : demo_topic_publisher/fast
 
 # Convenience name for target.
 beginner_tutorials/CMakeFiles/subpose.dir/rule:
@@ -243,19 +198,109 @@ subpose/fast:
 .PHONY : subpose/fast
 
 # Convenience name for target.
-beginner_tutorials/CMakeFiles/demo_topic_publisher.dir/rule:
-	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/demo_topic_publisher.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/demo_topic_publisher.dir/rule
+beginner_tutorials/CMakeFiles/demo_topic_subscriber.dir/rule:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/demo_topic_subscriber.dir/rule
+.PHONY : beginner_tutorials/CMakeFiles/demo_topic_subscriber.dir/rule
 
 # Convenience name for target.
-demo_topic_publisher: beginner_tutorials/CMakeFiles/demo_topic_publisher.dir/rule
+demo_topic_subscriber: beginner_tutorials/CMakeFiles/demo_topic_subscriber.dir/rule
 
-.PHONY : demo_topic_publisher
+.PHONY : demo_topic_subscriber
 
 # fast build rule for target.
-demo_topic_publisher/fast:
-	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/demo_topic_publisher.dir/build.make beginner_tutorials/CMakeFiles/demo_topic_publisher.dir/build
-.PHONY : demo_topic_publisher/fast
+demo_topic_subscriber/fast:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/demo_topic_subscriber.dir/build.make beginner_tutorials/CMakeFiles/demo_topic_subscriber.dir/build
+.PHONY : demo_topic_subscriber/fast
+
+# Convenience name for target.
+beginner_tutorials/CMakeFiles/pubvel.dir/rule:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/pubvel.dir/rule
+.PHONY : beginner_tutorials/CMakeFiles/pubvel.dir/rule
+
+# Convenience name for target.
+pubvel: beginner_tutorials/CMakeFiles/pubvel.dir/rule
+
+.PHONY : pubvel
+
+# fast build rule for target.
+pubvel/fast:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/pubvel.dir/build.make beginner_tutorials/CMakeFiles/pubvel.dir/build
+.PHONY : pubvel/fast
+
+# Convenience name for target.
+beginner_tutorials/CMakeFiles/distance_observer.dir/rule:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/distance_observer.dir/rule
+.PHONY : beginner_tutorials/CMakeFiles/distance_observer.dir/rule
+
+# Convenience name for target.
+distance_observer: beginner_tutorials/CMakeFiles/distance_observer.dir/rule
+
+.PHONY : distance_observer
+
+# fast build rule for target.
+distance_observer/fast:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/distance_observer.dir/build.make beginner_tutorials/CMakeFiles/distance_observer.dir/build
+.PHONY : distance_observer/fast
+
+# Convenience name for target.
+beginner_tutorials/CMakeFiles/safe_zone_vel_publisher.dir/rule:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/safe_zone_vel_publisher.dir/rule
+.PHONY : beginner_tutorials/CMakeFiles/safe_zone_vel_publisher.dir/rule
+
+# Convenience name for target.
+safe_zone_vel_publisher: beginner_tutorials/CMakeFiles/safe_zone_vel_publisher.dir/rule
+
+.PHONY : safe_zone_vel_publisher
+
+# fast build rule for target.
+safe_zone_vel_publisher/fast:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/safe_zone_vel_publisher.dir/build.make beginner_tutorials/CMakeFiles/safe_zone_vel_publisher.dir/build
+.PHONY : safe_zone_vel_publisher/fast
+
+# Convenience name for target.
+beginner_tutorials/CMakeFiles/smart_turtle.dir/rule:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/smart_turtle.dir/rule
+.PHONY : beginner_tutorials/CMakeFiles/smart_turtle.dir/rule
+
+# Convenience name for target.
+smart_turtle: beginner_tutorials/CMakeFiles/smart_turtle.dir/rule
+
+.PHONY : smart_turtle
+
+# fast build rule for target.
+smart_turtle/fast:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/smart_turtle.dir/build.make beginner_tutorials/CMakeFiles/smart_turtle.dir/build
+.PHONY : smart_turtle/fast
+
+# Convenience name for target.
+beginner_tutorials/CMakeFiles/move_second_turtle.dir/rule:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/move_second_turtle.dir/rule
+.PHONY : beginner_tutorials/CMakeFiles/move_second_turtle.dir/rule
+
+# Convenience name for target.
+move_second_turtle: beginner_tutorials/CMakeFiles/move_second_turtle.dir/rule
+
+.PHONY : move_second_turtle
+
+# fast build rule for target.
+move_second_turtle/fast:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/move_second_turtle.dir/build.make beginner_tutorials/CMakeFiles/move_second_turtle.dir/build
+.PHONY : move_second_turtle/fast
+
+# Convenience name for target.
+beginner_tutorials/CMakeFiles/distance_checker_plus.dir/rule:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/distance_checker_plus.dir/rule
+.PHONY : beginner_tutorials/CMakeFiles/distance_checker_plus.dir/rule
+
+# Convenience name for target.
+distance_checker_plus: beginner_tutorials/CMakeFiles/distance_checker_plus.dir/rule
+
+.PHONY : distance_checker_plus
+
+# fast build rule for target.
+distance_checker_plus/fast:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/distance_checker_plus.dir/build.make beginner_tutorials/CMakeFiles/distance_checker_plus.dir/build
+.PHONY : distance_checker_plus/fast
 
 src/demo_topic_publisher.o: src/demo_topic_publisher.cpp.o
 
@@ -310,6 +355,87 @@ src/demo_topic_subscriber.s: src/demo_topic_subscriber.cpp.s
 src/demo_topic_subscriber.cpp.s:
 	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/demo_topic_subscriber.dir/build.make beginner_tutorials/CMakeFiles/demo_topic_subscriber.dir/src/demo_topic_subscriber.cpp.s
 .PHONY : src/demo_topic_subscriber.cpp.s
+
+src/distance_checker_plus.o: src/distance_checker_plus.cpp.o
+
+.PHONY : src/distance_checker_plus.o
+
+# target to build an object file
+src/distance_checker_plus.cpp.o:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/distance_checker_plus.dir/build.make beginner_tutorials/CMakeFiles/distance_checker_plus.dir/src/distance_checker_plus.cpp.o
+.PHONY : src/distance_checker_plus.cpp.o
+
+src/distance_checker_plus.i: src/distance_checker_plus.cpp.i
+
+.PHONY : src/distance_checker_plus.i
+
+# target to preprocess a source file
+src/distance_checker_plus.cpp.i:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/distance_checker_plus.dir/build.make beginner_tutorials/CMakeFiles/distance_checker_plus.dir/src/distance_checker_plus.cpp.i
+.PHONY : src/distance_checker_plus.cpp.i
+
+src/distance_checker_plus.s: src/distance_checker_plus.cpp.s
+
+.PHONY : src/distance_checker_plus.s
+
+# target to generate assembly for a file
+src/distance_checker_plus.cpp.s:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/distance_checker_plus.dir/build.make beginner_tutorials/CMakeFiles/distance_checker_plus.dir/src/distance_checker_plus.cpp.s
+.PHONY : src/distance_checker_plus.cpp.s
+
+src/distance_observer.o: src/distance_observer.cpp.o
+
+.PHONY : src/distance_observer.o
+
+# target to build an object file
+src/distance_observer.cpp.o:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/distance_observer.dir/build.make beginner_tutorials/CMakeFiles/distance_observer.dir/src/distance_observer.cpp.o
+.PHONY : src/distance_observer.cpp.o
+
+src/distance_observer.i: src/distance_observer.cpp.i
+
+.PHONY : src/distance_observer.i
+
+# target to preprocess a source file
+src/distance_observer.cpp.i:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/distance_observer.dir/build.make beginner_tutorials/CMakeFiles/distance_observer.dir/src/distance_observer.cpp.i
+.PHONY : src/distance_observer.cpp.i
+
+src/distance_observer.s: src/distance_observer.cpp.s
+
+.PHONY : src/distance_observer.s
+
+# target to generate assembly for a file
+src/distance_observer.cpp.s:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/distance_observer.dir/build.make beginner_tutorials/CMakeFiles/distance_observer.dir/src/distance_observer.cpp.s
+.PHONY : src/distance_observer.cpp.s
+
+src/move_second_turtle.o: src/move_second_turtle.cpp.o
+
+.PHONY : src/move_second_turtle.o
+
+# target to build an object file
+src/move_second_turtle.cpp.o:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/move_second_turtle.dir/build.make beginner_tutorials/CMakeFiles/move_second_turtle.dir/src/move_second_turtle.cpp.o
+.PHONY : src/move_second_turtle.cpp.o
+
+src/move_second_turtle.i: src/move_second_turtle.cpp.i
+
+.PHONY : src/move_second_turtle.i
+
+# target to preprocess a source file
+src/move_second_turtle.cpp.i:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/move_second_turtle.dir/build.make beginner_tutorials/CMakeFiles/move_second_turtle.dir/src/move_second_turtle.cpp.i
+.PHONY : src/move_second_turtle.cpp.i
+
+src/move_second_turtle.s: src/move_second_turtle.cpp.s
+
+.PHONY : src/move_second_turtle.s
+
+# target to generate assembly for a file
+src/move_second_turtle.cpp.s:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/move_second_turtle.dir/build.make beginner_tutorials/CMakeFiles/move_second_turtle.dir/src/move_second_turtle.cpp.s
+.PHONY : src/move_second_turtle.cpp.s
 
 src/pubvel.o: src/pubvel.cpp.o
 
@@ -425,25 +551,37 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
-	@echo "... edit_cache"
-	@echo "... test"
 	@echo "... install/local"
-	@echo "... smart_turtle"
-	@echo "... safe_zone_vel_publisher"
-	@echo "... pubvel"
-	@echo "... demo_topic_subscriber"
 	@echo "... install"
-	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... subpose"
 	@echo "... demo_topic_publisher"
+	@echo "... subpose"
+	@echo "... demo_topic_subscriber"
+	@echo "... list_install_components"
+	@echo "... pubvel"
+	@echo "... distance_observer"
+	@echo "... safe_zone_vel_publisher"
+	@echo "... install/strip"
+	@echo "... smart_turtle"
+	@echo "... move_second_turtle"
+	@echo "... distance_checker_plus"
+	@echo "... test"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... src/demo_topic_publisher.o"
 	@echo "... src/demo_topic_publisher.i"
 	@echo "... src/demo_topic_publisher.s"
 	@echo "... src/demo_topic_subscriber.o"
 	@echo "... src/demo_topic_subscriber.i"
 	@echo "... src/demo_topic_subscriber.s"
+	@echo "... src/distance_checker_plus.o"
+	@echo "... src/distance_checker_plus.i"
+	@echo "... src/distance_checker_plus.s"
+	@echo "... src/distance_observer.o"
+	@echo "... src/distance_observer.i"
+	@echo "... src/distance_observer.s"
+	@echo "... src/move_second_turtle.o"
+	@echo "... src/move_second_turtle.i"
+	@echo "... src/move_second_turtle.s"
 	@echo "... src/pubvel.o"
 	@echo "... src/pubvel.i"
 	@echo "... src/pubvel.s"

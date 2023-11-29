@@ -909,56 +909,17 @@ roscpp_generate_messages_eus/fast:
 .PHONY : roscpp_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named smart_turtle
+# Target rules for targets named demo_topic_publisher
 
 # Build rule for target.
-smart_turtle: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 smart_turtle
-.PHONY : smart_turtle
+demo_topic_publisher: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 demo_topic_publisher
+.PHONY : demo_topic_publisher
 
 # fast build rule for target.
-smart_turtle/fast:
-	$(MAKE) -f beginner_tutorials/CMakeFiles/smart_turtle.dir/build.make beginner_tutorials/CMakeFiles/smart_turtle.dir/build
-.PHONY : smart_turtle/fast
-
-#=============================================================================
-# Target rules for targets named safe_zone_vel_publisher
-
-# Build rule for target.
-safe_zone_vel_publisher: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 safe_zone_vel_publisher
-.PHONY : safe_zone_vel_publisher
-
-# fast build rule for target.
-safe_zone_vel_publisher/fast:
-	$(MAKE) -f beginner_tutorials/CMakeFiles/safe_zone_vel_publisher.dir/build.make beginner_tutorials/CMakeFiles/safe_zone_vel_publisher.dir/build
-.PHONY : safe_zone_vel_publisher/fast
-
-#=============================================================================
-# Target rules for targets named pubvel
-
-# Build rule for target.
-pubvel: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pubvel
-.PHONY : pubvel
-
-# fast build rule for target.
-pubvel/fast:
-	$(MAKE) -f beginner_tutorials/CMakeFiles/pubvel.dir/build.make beginner_tutorials/CMakeFiles/pubvel.dir/build
-.PHONY : pubvel/fast
-
-#=============================================================================
-# Target rules for targets named demo_topic_subscriber
-
-# Build rule for target.
-demo_topic_subscriber: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 demo_topic_subscriber
-.PHONY : demo_topic_subscriber
-
-# fast build rule for target.
-demo_topic_subscriber/fast:
-	$(MAKE) -f beginner_tutorials/CMakeFiles/demo_topic_subscriber.dir/build.make beginner_tutorials/CMakeFiles/demo_topic_subscriber.dir/build
-.PHONY : demo_topic_subscriber/fast
+demo_topic_publisher/fast:
+	$(MAKE) -f beginner_tutorials/CMakeFiles/demo_topic_publisher.dir/build.make beginner_tutorials/CMakeFiles/demo_topic_publisher.dir/build
+.PHONY : demo_topic_publisher/fast
 
 #=============================================================================
 # Target rules for targets named subpose
@@ -974,17 +935,95 @@ subpose/fast:
 .PHONY : subpose/fast
 
 #=============================================================================
-# Target rules for targets named demo_topic_publisher
+# Target rules for targets named demo_topic_subscriber
 
 # Build rule for target.
-demo_topic_publisher: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 demo_topic_publisher
-.PHONY : demo_topic_publisher
+demo_topic_subscriber: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 demo_topic_subscriber
+.PHONY : demo_topic_subscriber
 
 # fast build rule for target.
-demo_topic_publisher/fast:
-	$(MAKE) -f beginner_tutorials/CMakeFiles/demo_topic_publisher.dir/build.make beginner_tutorials/CMakeFiles/demo_topic_publisher.dir/build
-.PHONY : demo_topic_publisher/fast
+demo_topic_subscriber/fast:
+	$(MAKE) -f beginner_tutorials/CMakeFiles/demo_topic_subscriber.dir/build.make beginner_tutorials/CMakeFiles/demo_topic_subscriber.dir/build
+.PHONY : demo_topic_subscriber/fast
+
+#=============================================================================
+# Target rules for targets named pubvel
+
+# Build rule for target.
+pubvel: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pubvel
+.PHONY : pubvel
+
+# fast build rule for target.
+pubvel/fast:
+	$(MAKE) -f beginner_tutorials/CMakeFiles/pubvel.dir/build.make beginner_tutorials/CMakeFiles/pubvel.dir/build
+.PHONY : pubvel/fast
+
+#=============================================================================
+# Target rules for targets named distance_observer
+
+# Build rule for target.
+distance_observer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 distance_observer
+.PHONY : distance_observer
+
+# fast build rule for target.
+distance_observer/fast:
+	$(MAKE) -f beginner_tutorials/CMakeFiles/distance_observer.dir/build.make beginner_tutorials/CMakeFiles/distance_observer.dir/build
+.PHONY : distance_observer/fast
+
+#=============================================================================
+# Target rules for targets named safe_zone_vel_publisher
+
+# Build rule for target.
+safe_zone_vel_publisher: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 safe_zone_vel_publisher
+.PHONY : safe_zone_vel_publisher
+
+# fast build rule for target.
+safe_zone_vel_publisher/fast:
+	$(MAKE) -f beginner_tutorials/CMakeFiles/safe_zone_vel_publisher.dir/build.make beginner_tutorials/CMakeFiles/safe_zone_vel_publisher.dir/build
+.PHONY : safe_zone_vel_publisher/fast
+
+#=============================================================================
+# Target rules for targets named smart_turtle
+
+# Build rule for target.
+smart_turtle: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 smart_turtle
+.PHONY : smart_turtle
+
+# fast build rule for target.
+smart_turtle/fast:
+	$(MAKE) -f beginner_tutorials/CMakeFiles/smart_turtle.dir/build.make beginner_tutorials/CMakeFiles/smart_turtle.dir/build
+.PHONY : smart_turtle/fast
+
+#=============================================================================
+# Target rules for targets named move_second_turtle
+
+# Build rule for target.
+move_second_turtle: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 move_second_turtle
+.PHONY : move_second_turtle
+
+# fast build rule for target.
+move_second_turtle/fast:
+	$(MAKE) -f beginner_tutorials/CMakeFiles/move_second_turtle.dir/build.make beginner_tutorials/CMakeFiles/move_second_turtle.dir/build
+.PHONY : move_second_turtle/fast
+
+#=============================================================================
+# Target rules for targets named distance_checker_plus
+
+# Build rule for target.
+distance_checker_plus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 distance_checker_plus
+.PHONY : distance_checker_plus
+
+# fast build rule for target.
+distance_checker_plus/fast:
+	$(MAKE) -f beginner_tutorials/CMakeFiles/distance_checker_plus.dir/build.make beginner_tutorials/CMakeFiles/distance_checker_plus.dir/build
+.PHONY : distance_checker_plus/fast
 
 #=============================================================================
 # Target rules for targets named spawn_turtle_plus
@@ -1624,6 +1663,19 @@ nav_msgs_generate_messages_nodejs/fast:
 .PHONY : nav_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named urdf_tutorial_b
+
+# Build rule for target.
+urdf_tutorial_b: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 urdf_tutorial_b
+.PHONY : urdf_tutorial_b
+
+# fast build rule for target.
+urdf_tutorial_b/fast:
+	$(MAKE) -f urdf_tutorial-master/CMakeFiles/urdf_tutorial_b.dir/build.make urdf_tutorial-master/CMakeFiles/urdf_tutorial_b.dir/build
+.PHONY : urdf_tutorial_b/fast
+
+#=============================================================================
 # Target rules for targets named urdf_tutorial_template
 
 # Build rule for target.
@@ -1780,6 +1832,19 @@ urdf_tutorial_generate_messages_nodejs/fast:
 .PHONY : urdf_tutorial_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named urdf_tutorial_arm
+
+# Build rule for target.
+urdf_tutorial_arm: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 urdf_tutorial_arm
+.PHONY : urdf_tutorial_arm
+
+# fast build rule for target.
+urdf_tutorial_arm/fast:
+	$(MAKE) -f urdf_tutorial-master/CMakeFiles/urdf_tutorial_arm.dir/build.make urdf_tutorial-master/CMakeFiles/urdf_tutorial_arm.dir/build
+.PHONY : urdf_tutorial_arm/fast
+
+#=============================================================================
 # Target rules for targets named urdf_tutorial_generate_messages_py
 
 # Build rule for target.
@@ -1888,12 +1953,15 @@ help:
 	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... tf2_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_eus"
-	@echo "... smart_turtle"
-	@echo "... safe_zone_vel_publisher"
-	@echo "... pubvel"
-	@echo "... demo_topic_subscriber"
-	@echo "... subpose"
 	@echo "... demo_topic_publisher"
+	@echo "... subpose"
+	@echo "... demo_topic_subscriber"
+	@echo "... pubvel"
+	@echo "... distance_observer"
+	@echo "... safe_zone_vel_publisher"
+	@echo "... smart_turtle"
+	@echo "... move_second_turtle"
+	@echo "... distance_checker_plus"
 	@echo "... spawn_turtle_plus"
 	@echo "... improved_pubvel_toggle"
 	@echo "... spawn_turtle"
@@ -1943,6 +2011,7 @@ help:
 	@echo "... rviz_generate_messages_lisp"
 	@echo "... map_msgs_generate_messages_nodejs"
 	@echo "... nav_msgs_generate_messages_nodejs"
+	@echo "... urdf_tutorial_b"
 	@echo "... urdf_tutorial_template"
 	@echo "... urdf_tutorial_generate_messages"
 	@echo "... urdf_tutorial_a"
@@ -1955,6 +2024,7 @@ help:
 	@echo "... urdf_tutorial_generate_messages_lisp"
 	@echo "... urdf_tutorial_genlisp"
 	@echo "... urdf_tutorial_generate_messages_nodejs"
+	@echo "... urdf_tutorial_arm"
 	@echo "... urdf_tutorial_generate_messages_py"
 	@echo "... urdf_tutorial_gennodejs"
 	@echo "... urdf_tutorial_genpy"

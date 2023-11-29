@@ -56,18 +56,6 @@ CMAKE_BINARY_DIR = /home/ubunturos/catkin_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -123,6 +111,18 @@ test/fast: test
 
 .PHONY : test/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -166,6 +166,21 @@ preinstall/fast:
 depend:
 	cd /home/ubunturos/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+urdf_tutorial-master/CMakeFiles/urdf_tutorial_b.dir/rule:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf_tutorial-master/CMakeFiles/urdf_tutorial_b.dir/rule
+.PHONY : urdf_tutorial-master/CMakeFiles/urdf_tutorial_b.dir/rule
+
+# Convenience name for target.
+urdf_tutorial_b: urdf_tutorial-master/CMakeFiles/urdf_tutorial_b.dir/rule
+
+.PHONY : urdf_tutorial_b
+
+# fast build rule for target.
+urdf_tutorial_b/fast:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f urdf_tutorial-master/CMakeFiles/urdf_tutorial_b.dir/build.make urdf_tutorial-master/CMakeFiles/urdf_tutorial_b.dir/build
+.PHONY : urdf_tutorial_b/fast
 
 # Convenience name for target.
 urdf_tutorial-master/CMakeFiles/urdf_tutorial_template.dir/rule:
@@ -348,6 +363,21 @@ urdf_tutorial_generate_messages_nodejs/fast:
 .PHONY : urdf_tutorial_generate_messages_nodejs/fast
 
 # Convenience name for target.
+urdf_tutorial-master/CMakeFiles/urdf_tutorial_arm.dir/rule:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf_tutorial-master/CMakeFiles/urdf_tutorial_arm.dir/rule
+.PHONY : urdf_tutorial-master/CMakeFiles/urdf_tutorial_arm.dir/rule
+
+# Convenience name for target.
+urdf_tutorial_arm: urdf_tutorial-master/CMakeFiles/urdf_tutorial_arm.dir/rule
+
+.PHONY : urdf_tutorial_arm
+
+# fast build rule for target.
+urdf_tutorial_arm/fast:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f urdf_tutorial-master/CMakeFiles/urdf_tutorial_arm.dir/build.make urdf_tutorial-master/CMakeFiles/urdf_tutorial_arm.dir/build
+.PHONY : urdf_tutorial_arm/fast
+
+# Convenience name for target.
 urdf_tutorial-master/CMakeFiles/urdf_tutorial_generate_messages_py.dir/rule:
 	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf_tutorial-master/CMakeFiles/urdf_tutorial_generate_messages_py.dir/rule
 .PHONY : urdf_tutorial-master/CMakeFiles/urdf_tutorial_generate_messages_py.dir/rule
@@ -419,6 +449,60 @@ src/urdf_tutorial_a.cpp.s:
 	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f urdf_tutorial-master/CMakeFiles/urdf_tutorial_a.dir/build.make urdf_tutorial-master/CMakeFiles/urdf_tutorial_a.dir/src/urdf_tutorial_a.cpp.s
 .PHONY : src/urdf_tutorial_a.cpp.s
 
+src/urdf_tutorial_arm.o: src/urdf_tutorial_arm.cpp.o
+
+.PHONY : src/urdf_tutorial_arm.o
+
+# target to build an object file
+src/urdf_tutorial_arm.cpp.o:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f urdf_tutorial-master/CMakeFiles/urdf_tutorial_arm.dir/build.make urdf_tutorial-master/CMakeFiles/urdf_tutorial_arm.dir/src/urdf_tutorial_arm.cpp.o
+.PHONY : src/urdf_tutorial_arm.cpp.o
+
+src/urdf_tutorial_arm.i: src/urdf_tutorial_arm.cpp.i
+
+.PHONY : src/urdf_tutorial_arm.i
+
+# target to preprocess a source file
+src/urdf_tutorial_arm.cpp.i:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f urdf_tutorial-master/CMakeFiles/urdf_tutorial_arm.dir/build.make urdf_tutorial-master/CMakeFiles/urdf_tutorial_arm.dir/src/urdf_tutorial_arm.cpp.i
+.PHONY : src/urdf_tutorial_arm.cpp.i
+
+src/urdf_tutorial_arm.s: src/urdf_tutorial_arm.cpp.s
+
+.PHONY : src/urdf_tutorial_arm.s
+
+# target to generate assembly for a file
+src/urdf_tutorial_arm.cpp.s:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f urdf_tutorial-master/CMakeFiles/urdf_tutorial_arm.dir/build.make urdf_tutorial-master/CMakeFiles/urdf_tutorial_arm.dir/src/urdf_tutorial_arm.cpp.s
+.PHONY : src/urdf_tutorial_arm.cpp.s
+
+src/urdf_tutorial_b.o: src/urdf_tutorial_b.cpp.o
+
+.PHONY : src/urdf_tutorial_b.o
+
+# target to build an object file
+src/urdf_tutorial_b.cpp.o:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f urdf_tutorial-master/CMakeFiles/urdf_tutorial_b.dir/build.make urdf_tutorial-master/CMakeFiles/urdf_tutorial_b.dir/src/urdf_tutorial_b.cpp.o
+.PHONY : src/urdf_tutorial_b.cpp.o
+
+src/urdf_tutorial_b.i: src/urdf_tutorial_b.cpp.i
+
+.PHONY : src/urdf_tutorial_b.i
+
+# target to preprocess a source file
+src/urdf_tutorial_b.cpp.i:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f urdf_tutorial-master/CMakeFiles/urdf_tutorial_b.dir/build.make urdf_tutorial-master/CMakeFiles/urdf_tutorial_b.dir/src/urdf_tutorial_b.cpp.i
+.PHONY : src/urdf_tutorial_b.cpp.i
+
+src/urdf_tutorial_b.s: src/urdf_tutorial_b.cpp.s
+
+.PHONY : src/urdf_tutorial_b.s
+
+# target to generate assembly for a file
+src/urdf_tutorial_b.cpp.s:
+	cd /home/ubunturos/catkin_ws/build && $(MAKE) -f urdf_tutorial-master/CMakeFiles/urdf_tutorial_b.dir/build.make urdf_tutorial-master/CMakeFiles/urdf_tutorial_b.dir/src/urdf_tutorial_b.cpp.s
+.PHONY : src/urdf_tutorial_b.cpp.s
+
 src/urdf_tutorial_template.o: src/urdf_tutorial_template.cpp.o
 
 .PHONY : src/urdf_tutorial_template.o
@@ -452,12 +536,13 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... install/strip"
+	@echo "... urdf_tutorial_b"
 	@echo "... urdf_tutorial_template"
 	@echo "... urdf_tutorial_generate_messages"
 	@echo "... urdf_tutorial_a"
@@ -471,12 +556,19 @@ help:
 	@echo "... urdf_tutorial_generate_messages_lisp"
 	@echo "... urdf_tutorial_genlisp"
 	@echo "... urdf_tutorial_generate_messages_nodejs"
+	@echo "... urdf_tutorial_arm"
 	@echo "... urdf_tutorial_generate_messages_py"
 	@echo "... urdf_tutorial_gennodejs"
 	@echo "... urdf_tutorial_genpy"
 	@echo "... src/urdf_tutorial_a.o"
 	@echo "... src/urdf_tutorial_a.i"
 	@echo "... src/urdf_tutorial_a.s"
+	@echo "... src/urdf_tutorial_arm.o"
+	@echo "... src/urdf_tutorial_arm.i"
+	@echo "... src/urdf_tutorial_arm.s"
+	@echo "... src/urdf_tutorial_b.o"
+	@echo "... src/urdf_tutorial_b.i"
+	@echo "... src/urdf_tutorial_b.s"
 	@echo "... src/urdf_tutorial_template.o"
 	@echo "... src/urdf_tutorial_template.i"
 	@echo "... src/urdf_tutorial_template.s"
