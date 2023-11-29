@@ -6,6 +6,46 @@
 
 #IncludeRegexTransform: 
 
+/home/ubunturos/catkin_ws/devel/include/beginner_tutorials/dis.h
+ros/service_traits.h
+-
+beginner_tutorials/disRequest.h
+-
+beginner_tutorials/disResponse.h
+-
+
+/home/ubunturos/catkin_ws/devel/include/beginner_tutorials/disRequest.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
+/home/ubunturos/catkin_ws/devel/include/beginner_tutorials/disResponse.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
 /home/ubunturos/catkin_ws/src/beginner_tutorials/src/distance_observer.cpp
 ros/ros.h
 -
@@ -14,7 +54,7 @@ turtlesim/Pose.h
 iomanip
 -
 beginner_tutorials/dis.h
-/home/ubunturos/catkin_ws/src/beginner_tutorials/src/beginner_tutorials/dis.h
+-
 
 /opt/ros/noetic/include/ros/advertise_options.h
 ros/forwards.h

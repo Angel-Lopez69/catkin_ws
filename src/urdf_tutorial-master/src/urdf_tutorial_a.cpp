@@ -1,7 +1,7 @@
 #include <ros/ros.h>
 #include <sensor_msgs/JointState.h>
 #include <geometry_msgs/Twist.h>
-#include <urdf_tutorial/changescale.h>
+//#include <urdf_tutorial/changescale.h>
 
 
 double deltaPan;

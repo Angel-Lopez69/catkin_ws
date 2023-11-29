@@ -1,10 +1,8 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(FATAL_ERROR "Could not find messages which '/home/ubunturos/catkin_ws/src/beginner_tutorials/srv/dis.srv' depends on. Did you forget to specify generate_messages(DEPENDENCIES ...)?
-Cannot locate message [float]: unknown package [beginner_tutorials] on search path [{}]")
 message(STATUS "beginner_tutorials: 0 messages, 1 services")
 
-set(MSG_I_FLAGS "")
+set(MSG_I_FLAGS "-Ibeginner_tutorials:/home/ubunturos/catkin_ws/src/beginner_tutorials/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -19,6 +17,11 @@ add_custom_target(beginner_tutorials_generate_messages ALL)
 
 
 
+get_filename_component(_filename "/home/ubunturos/catkin_ws/src/beginner_tutorials/srv/dis.srv" NAME_WE)
+add_custom_target(_beginner_tutorials_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "beginner_tutorials" "/home/ubunturos/catkin_ws/src/beginner_tutorials/srv/dis.srv" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -27,6 +30,12 @@ add_custom_target(beginner_tutorials_generate_messages ALL)
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_cpp(beginner_tutorials
+  "/home/ubunturos/catkin_ws/src/beginner_tutorials/srv/dis.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/beginner_tutorials
+)
 
 ### Generating Module File
 _generate_module_cpp(beginner_tutorials
@@ -40,6 +49,8 @@ add_custom_target(beginner_tutorials_generate_messages_cpp
 add_dependencies(beginner_tutorials_generate_messages beginner_tutorials_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/ubunturos/catkin_ws/src/beginner_tutorials/srv/dis.srv" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_cpp _beginner_tutorials_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(beginner_tutorials_gencpp)
@@ -52,6 +63,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS beginner_tutorials_generate_message
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_eus(beginner_tutorials
+  "/home/ubunturos/catkin_ws/src/beginner_tutorials/srv/dis.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/beginner_tutorials
+)
 
 ### Generating Module File
 _generate_module_eus(beginner_tutorials
@@ -65,6 +82,8 @@ add_custom_target(beginner_tutorials_generate_messages_eus
 add_dependencies(beginner_tutorials_generate_messages beginner_tutorials_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/ubunturos/catkin_ws/src/beginner_tutorials/srv/dis.srv" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_eus _beginner_tutorials_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(beginner_tutorials_geneus)
@@ -77,6 +96,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS beginner_tutorials_generate_message
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_lisp(beginner_tutorials
+  "/home/ubunturos/catkin_ws/src/beginner_tutorials/srv/dis.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/beginner_tutorials
+)
 
 ### Generating Module File
 _generate_module_lisp(beginner_tutorials
@@ -90,6 +115,8 @@ add_custom_target(beginner_tutorials_generate_messages_lisp
 add_dependencies(beginner_tutorials_generate_messages beginner_tutorials_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/ubunturos/catkin_ws/src/beginner_tutorials/srv/dis.srv" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_lisp _beginner_tutorials_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(beginner_tutorials_genlisp)
@@ -102,6 +129,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS beginner_tutorials_generate_message
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_nodejs(beginner_tutorials
+  "/home/ubunturos/catkin_ws/src/beginner_tutorials/srv/dis.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/beginner_tutorials
+)
 
 ### Generating Module File
 _generate_module_nodejs(beginner_tutorials
@@ -115,6 +148,8 @@ add_custom_target(beginner_tutorials_generate_messages_nodejs
 add_dependencies(beginner_tutorials_generate_messages beginner_tutorials_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/ubunturos/catkin_ws/src/beginner_tutorials/srv/dis.srv" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_nodejs _beginner_tutorials_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(beginner_tutorials_gennodejs)
@@ -127,6 +162,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS beginner_tutorials_generate_message
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_py(beginner_tutorials
+  "/home/ubunturos/catkin_ws/src/beginner_tutorials/srv/dis.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/beginner_tutorials
+)
 
 ### Generating Module File
 _generate_module_py(beginner_tutorials
@@ -140,6 +181,8 @@ add_custom_target(beginner_tutorials_generate_messages_py
 add_dependencies(beginner_tutorials_generate_messages beginner_tutorials_generate_messages_py)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/ubunturos/catkin_ws/src/beginner_tutorials/srv/dis.srv" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_py _beginner_tutorials_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(beginner_tutorials_genpy)
@@ -157,6 +200,9 @@ if(gencpp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/be
     DESTINATION ${gencpp_INSTALL_DIR}
   )
 endif()
+if(TARGET std_msgs_generate_messages_cpp)
+  add_dependencies(beginner_tutorials_generate_messages_cpp std_msgs_generate_messages_cpp)
+endif()
 
 if(geneus_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/beginner_tutorials)
   # install generated code
@@ -164,6 +210,9 @@ if(geneus_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/be
     DIRECTORY ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/beginner_tutorials
     DESTINATION ${geneus_INSTALL_DIR}
   )
+endif()
+if(TARGET std_msgs_generate_messages_eus)
+  add_dependencies(beginner_tutorials_generate_messages_eus std_msgs_generate_messages_eus)
 endif()
 
 if(genlisp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/beginner_tutorials)
@@ -173,6 +222,9 @@ if(genlisp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/
     DESTINATION ${genlisp_INSTALL_DIR}
   )
 endif()
+if(TARGET std_msgs_generate_messages_lisp)
+  add_dependencies(beginner_tutorials_generate_messages_lisp std_msgs_generate_messages_lisp)
+endif()
 
 if(gennodejs_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/beginner_tutorials)
   # install generated code
@@ -180,6 +232,9 @@ if(gennodejs_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_D
     DIRECTORY ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/beginner_tutorials
     DESTINATION ${gennodejs_INSTALL_DIR}
   )
+endif()
+if(TARGET std_msgs_generate_messages_nodejs)
+  add_dependencies(beginner_tutorials_generate_messages_nodejs std_msgs_generate_messages_nodejs)
 endif()
 
 if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/beginner_tutorials)
@@ -189,4 +244,7 @@ if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/begi
     DIRECTORY ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/beginner_tutorials
     DESTINATION ${genpy_INSTALL_DIR}
   )
+endif()
+if(TARGET std_msgs_generate_messages_py)
+  add_dependencies(beginner_tutorials_generate_messages_py std_msgs_generate_messages_py)
 endif()
